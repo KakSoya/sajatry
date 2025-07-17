@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aysha's Website</title>
+  <link rel="stylesheet" href="css/HOMEPAGE.css" />
+</head>
+
+<body>
+  <!-- Title -->
+  <div class="title">
+    <img src="img/homepage/title3.png" alt="Aysha's Website Title"  />
+  </div>
+
+  <!-- All Items -->
+  <div class="items">
+    <!-- Decorations (not clickable) -->
+    <div class="item deco clock">
+      <img src="img/homepage/42497fe0003cbd8978e58b074153ff5e-removebg-preview.png" alt="Melting Clock" />
+    </div>
+    <div class="item deco guitar">
+      <img src="img/homepage/ae0064338804adb42e25a881c482e4b0-removebg-preview.png" alt="Guitar" />
+    </div>
+    <div class="item deco cat">
+      <img src="img/homepage/80e1f0d5fc412b3a20aa5eac22751216-removebg-preview.png" alt="Orange Cat" />
+    </div>
+    <div class="item deco girl">
+	  <a href="333.html">
+      <img src="img/homepage/63d810d47c0475652fb3aab678277d94-removebg-preview.png" alt="Girl Character" /></a>
+    </div>
+    <div class="item deco notes">
+      <img src="img/homepage/10d3eb63d65c49f45148b61142d9b22d-removebg-preview.png" alt="Music Notes" />
+    </div>
+    <div class="item deco teddy">
+      <img src="img/homepage/f46dfb41bee9490fc3941b0c186c9fb7-removebg-preview.png" alt="Teddy Bear" />
+    </div>
+    <div class="item deco headphone-cat">
+      <img src="img/homepage/1667909f2b8d55946b1424338eec255e-removebg-preview.png" alt="Cat with Headphones" />
+    </div>
+
+    <!-- Clickable items -->
+    <a href="ABOUT ME.html" class="item about">
+      <img src="img/homepage/ABOUT ME2.png" alt="About Me" />
+    </a>
+    <a href="STRAY KIDS.html" class="item cd1">
+      <img src="img/homepage/cd4.png" alt="CD 1" />
+    </a>
+    <a href="ATEEZ.html" class="item cd2">
+      <img src="img/homepage/cd5.png" alt="CD 2" />
+    </a>
+    <a href="BOYNEXTDOOR.html" class="item cd3">
+      <img src="img/homepage/cd3.png" alt="CD 3" />
+    </a>
+    <a href="XDINARY HEROES.html" class="item cd4">
+      <img src="img/homepage/cd1.png" alt="CD 4" />
+    </a>
+    <a href="TOMORROW X TOGETHER.html" class="item cd5">
+      <img src="img/homepage/cd2.png" alt="CD 5" />
+    </a>
+    <a href="https://open.spotify.com/user/cenlscnkhcy5ref6wngwpem4m?si=63fb847906434e34" class="item playlist">
+      <img src="img/homepage/dd957f2e9ee0af8f6f4b9ac2a89ecbb9-removebg-preview.png" alt="Playlist" />
+    </a>
+  </div>
+
+  <!-- Slide-in animation script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const items = document.querySelectorAll(".item");
+      items.forEach((item, index) => {
+        setTimeout(() => {
+          item.classList.add("slide-in");
+        }, index * 200);
+      });
+    });
+  </script>
+</body>
+</html>
