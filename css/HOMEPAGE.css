@@ -1,0 +1,195 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial Rounded MT Bold', sans-serif;
+  background: #f4f4f4;
+  overflow-x: hidden;
+}
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.title img {
+  width: 1000px;
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* Container for all items */
+.items {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Animation styling */
+.item {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  position: absolute;
+  z-index: 1;
+}
+
+.item.slide-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.item img {
+  width: 170px;
+  height: auto;
+  max-width: 100%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.item img:hover {
+  transform: scale(1.05);
+}
+
+/* --------------------------- */
+/* Decoration Positioning      */
+/* --------------------------- */
+.clock {
+  top: 80px;
+  left: 200px;
+  z-index: 2;
+}
+
+.clock img {
+  transform: rotate(15deg)
+}
+
+.guitar {
+  top: 150px;
+  left: 410px;
+  z-index: 4;
+}
+
+.cat {
+  bottom: 100px;
+  left: 420px;
+  z-index: 4;
+}
+
+.cat img {
+  width: 170px;
+  height: auto;
+}
+
+.girl {
+  top: 80px;
+  left: 46%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.girl img {
+  width: 240px;
+  height: auto;
+}
+
+.notes {
+  top: 440px;
+  right: 280px;
+  z-index: 2;
+}
+
+.notes img{
+  transform: rotate(-65deg);
+}
+
+.teddy {
+  bottom: 120px;
+  right: 410px;
+  z-index: 3;
+}
+
+.teddy img{
+  width: 190px;
+  height: auto;
+  transform:rotate(10deg)
+}
+
+.headphone-cat {
+  top: 190px;
+  right: 320px;
+  z-index: 2;;
+}
+
+.headphone-cat img{
+  width: 190px;
+  height: auto;
+  transform: rotate(14deg)
+}
+
+/* --------------------------- */
+/* Clickable Items Positioning */
+/* --------------------------- */
+.about {
+  top: 130px;
+  left: 290px;
+}
+
+.about img {
+  width: 210px;
+  height: auto;
+  transform: rotate(-10deg);
+}
+
+.cd1 {
+  top: 380px;
+  left: 290px;
+}
+
+.cd2 {
+  top: 120px;
+  left: 540px;
+}
+
+.cd3 {
+  top: 320px;
+  right: 140px;
+}
+
+.cd3 img{
+  width: 300px;
+  height: auto;
+}
+
+.cd4 img {
+  width: 210px;
+  height : auto;
+}
+
+.cd4 {
+  top: 390px;
+  left: 560px;
+}
+
+.cd5 {
+  top: 120px;
+  left: 940px;
+}
+
+.cd5 img {
+  width: 180px;
+  height : auto;
+}
+
+.playlist {
+  top: 420px;
+  left: 760px;
+}
+
+.playlist img {
+  width: 190px;
+  height: auto;
+  transform: rotate(10deg)
+}

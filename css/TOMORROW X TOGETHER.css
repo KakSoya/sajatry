@@ -1,0 +1,611 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Press Start 2P', monospace;
+  background-color: #0a0f2c;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: white;
+  font-family: 'Press Start 2P', monospace;
+  position: relative;
+  border-bottom: 1px solid #000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-icon {
+  width: 40px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 10px;
+}
+
+.nav-links {
+  display: flex;
+  margin-left: 830px;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.divider {
+  font-weight: lighter;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 2px;
+  background-color: black;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 70px;
+  right: 30px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  padding: 15px;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.menu a {
+  display: block;
+  padding: 8px 0;
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.menu.open {
+  display: flex;
+}
+
+/* Banner */
+.banner-img {
+  width: 99vw;
+  height: 99vh;
+  object-fit: cover;
+  display: block;
+}
+
+/* Video Strip */
+.video-container {
+  width: 100%;
+  top: 5px;
+  overflow: hidden;
+  background: #000;
+  position: relative;
+  padding: 30px 0;
+  border-top: 10px solid #333;
+  border-bottom: 10px solid #333;
+}
+
+.video-strip {
+  display: flex;
+  top: 160px;
+  gap: 20px;
+  animation: scrollVideos 60s linear infinite;
+  width: max-content;
+  padding: 10px;
+  background: repeating-linear-gradient(
+    to right,
+    #111 0px,
+    #111 10px,
+    #000 10px,
+    #000 30px
+  );
+}
+
+.film-frame {
+  width: 320px;
+  height: 180px;
+  border: 6px solid #222;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #FFFFFF;
+  overflow: hidden;
+  flex-shrink: 0;
+  background-color: #000;
+}
+
+.film-frame video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes scrollVideos {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-text,
+  .qr-social {
+    max-width: 100%;
+  }
+
+  .about-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .video-strip video {
+    width: 100%;
+  }
+}
+
+/* Scrollable content */
+.scroll-container {
+  display: flex;
+  gap: 40px;
+  padding: 60px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+/* Triple Image Section */
+.triple-images {
+  position: relative;
+  height: 700px; /* Increased from 500px */
+  margin: 80px 0;
+}
+
+.triple-images .img1 {
+  position: absolute;
+  top: 10px;
+  left: 150px;
+  width: 730px;
+  z-index: 1;
+}
+
+.triple-images .img2 {
+  position: absolute;
+  top: 220px;
+  left: 180px;
+  width: 340px;
+  z-index: 2;
+}
+
+.triple-images .img3 {
+  position: absolute;
+  top: 90px;
+  left: 480px;
+  width: 750px;
+  z-index: 3;
+}
+
+/* Spacer below triple image */
+.triple-spacer {
+  height: 150px; /* You can adjust this further */
+}
+
+/* Titles */
+.title-stray {
+  position: absolute;
+  top: 1170px;
+  left: 71.4%;
+  transform: translateX(-50%);
+  font-size: 28px;
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  letter-spacing: 8px;
+  z-index: 5;
+}
+
+.title-kids {
+  position: absolute;
+  top: 1420px;
+  right: 240px;
+  margin-top: 100px;
+  transform: rotate(90deg);
+  transform-origin: right top;
+  font-size: 30px;
+  font-family: 'Press Start 2P', cursive;
+  color: #ff4b91;
+  letter-spacing: 8px;
+  z-index: 5;
+}
+
+.title-section h1 {
+  font-size: 40px;
+  letter-spacing: 4px;
+}
+
+.title-section span {
+  color: #ff4b91;
+}
+
+/* About Stray Kids Layout */
+.about-skz-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #c9b6ff;
+  padding: 60px 5vw;
+  color: black;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 0; /* kept clean now that spacer is added */
+}
+
+/* Left side - Text */
+.about-text-block {
+  flex: 1;
+  max-width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-text-block h2 {
+  font-size: 40px;
+  letter-spacing: 4px;
+}
+
+.about-text-block p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #222;
+  font-family: 'Arial', sans-serif;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.social-icons img {
+  width: 40px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* Right side - Member grid */
+.member-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 50%;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.member-grid img {
+  width: 120px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.member-grid img:hover {
+  transform: scale(1.05);
+}
+
+.member-title {
+  grid-column: span 4;
+  margin-top: 20px;
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  margin-left: 430px;
+  color: black;
+}
+#Kotak5 {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* center them horizontally */
+  gap: 20px; /* optional spacing between h1 and img */
+}
+
+#Kotak5 h1 {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 2rem;
+  color: #f5f5f5; /* bright neon blue */
+  text-align: center;
+  text-shadow:
+    2px 2px 0 #001f33,   /* sharp drop shadow */
+    0 0 2px #00bfff,     /* subtle inner glow */
+    0 0 5px #00bfff;     /* slight neon edge */
+  margin-top: 50px;
+  letter-spacing: 2px;
+}
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.album-container {
+  display: flex;
+  gap: 30px;
+  transition: all 0.5s ease-in-out;
+}
+
+.album-card {
+  width: 300px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #0d0c20;
+  box-shadow: 0 0 20px #222;
+  text-align: center;
+  transition: all 0.4s ease;
+  opacity: 0.6;
+  transform: scale(0.9);
+}
+
+.album-card img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.album-card h3 {
+  margin-top: 15px;
+  font-size: 14px;
+  color: white;
+}
+
+/* Highlight center album */
+.album-card.active {
+  transform: scale(1.15);
+  opacity: 1;
+  box-shadow: 0 0 40px var(--glow);
+}
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px;
+    }
+
+    h1 {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 2rem;
+  color: #f5f5f5; /* bright neon blue */
+  text-align: center;
+  text-shadow:
+    2px 2px 0 #001f33,   /* sharp drop shadow */
+    0 0 2px #00bfff,     /* subtle inner glow */
+    0 0 5px #00bfff;     /* slight neon edge */
+  margin-top: 50px;
+  letter-spacing: 2px;
+    }
+
+    .player-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      background-color: #a8a3b7;
+      padding: 30px;
+      border-radius: 20px;
+      width: 90%;
+      max-width: 1000px;
+    }
+
+    .album-cover {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .player-controls {
+      text-align: center;
+    }
+
+    .player-controls h2 {
+      margin: 10px 0 5px;
+    }
+
+    .player-controls h3 {
+      margin: 0 0 20px;
+      font-weight: normal;
+      font-size: 16px;
+      color: #5f5b78;
+    }
+
+    .play-btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #6E6565;
+      border: none;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .play-btn:hover {
+      background-color: #c63c43;
+    }
+
+    .vinyl {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #444;
+    }
+
+    .content-box {
+      margin-top: 40px;
+      display: flex;
+      background-color: #a8a3b7;
+      padding: 30px;
+      border-radius: 20px;
+      width: 90%;
+      max-width: 1000px;
+      gap: 0px;
+    }
+
+    .lyrics {
+      flex: 1;
+      font-size: 14px;
+      white-space: pre-line;
+      line-height: 1.0;
+	  word-spacing: 4px;
+	  font-family: 'Space Grotesk', sans-serif;
+	  color: 	#2a2a2a;
+    }
+
+    .spotify-code {
+      margin-top: 10px;
+      width: 300px;
+    }
+
+    .paragraph {
+      flex: 1;
+      font-size: 14px;
+      line-height: 1.6; 
+	  margin-top: 20px;
+	
+    }
+
+.song-wrapper {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 50px;
+}
+
+/* LEFT column with thumbnails */
+.video-column {
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-self: flex-start; /* optional, keeps its own alignment */
+  transform: translateY(230px); /* ✅ moves it down visually */
+}
+
+.video-item {
+  background: #222;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.video-item:hover {
+  transform: scale(1.05);
+}
+
+.video-item video {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  pointer-events: none; /* so clicking triggers the parent div */
+}
+
+.video-title {
+  font-size: 12px;
+  color: #ccc;
+  padding: 5px;
+  background: #111;
+}
+
+/* FULLSCREEN MODAL */
+.video-modal {
+  display: none; /* hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.95);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.video-modal video {
+  max-width: 90%;
+  max-height: 80%;
+  border: 5px solid #444;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 15px;
+  font-size: 16px;
+  background: #ff4b91;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.modal-controls {
+  position: absolute;
+  bottom: 30px;
+  display: flex;
+  gap: 10px;
+  background: rgba(0,0,0,0.6);
+  padding: 12px 15px;
+  border-radius: 12px;
+}
+
+.modal-controls button {
+  background: #ff4b91;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.modal-controls button:hover {
+  background: #ff2a70;
+}

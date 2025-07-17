@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+    background-color: #171717;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: white;
+  font-family: 'Press Start 2P', monospace;
+  position: relative;
+  border-bottom: 1px solid #000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-icon {
+  width: 40px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 10px;
+  color: black;
+}
+
+.nav-links {
+  display: flex;
+  margin-left: 830px;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.divider {
+  font-weight: lighter;
+  color: black;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 2px;
+  background-color: black;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 70px;
+  right: 30px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  padding: 15px;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.menu a {
+  display: block;
+  padding: 8px 0;
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.menu.open {
+  display: flex;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background: #0e1116;
+  color: #f0f0f0;
+  overflow-x: hidden;
+}
+
+#contact {
+  background: #FFFFFF;
+  padding: 6rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-box {
+  max-width: 700px;
+  background: #FFFFFF;
+  padding: 3rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.contact-box h2 {
+  font-size: 2.5rem;
+  color: #111;
+  margin-bottom: 1rem;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.contact-box h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #3b82f6;
+  margin: 1rem auto 1.5rem;
+  border-radius: 2px;
+}
+
+.contact-lead {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ccc;
+  margin-bottom: 0.5rem;
+}
+
+.contact-box p {
+  color: #aaa;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.contact-button {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: #3b82f6;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+  background-color: #2563eb;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-item {
+  position: relative;
+}
+
+.form-item input,
+.form-item textarea {
+  width: 100%;
+  padding: 10px 6px;
+  border: none;
+  border-bottom: 2px solid black;
+  background: transparent;
+  font-size: 16px;
+  outline: none;
+  resize: none;
+}
+
+.form-item label {
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: grey;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.form-item:has(textarea) label {
+  top: 75%;
+}
+
+.form-item input:focus + label,
+.form-item textarea:focus + label,
+.form-item input:not(:placeholder-shown) + label,
+.form-item textarea:not(:placeholder-shown) + label {
+  top: -10px;
+  font-size: 12px;
+  color: black;
+}
+
+.form-button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 12px 0;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.form-button:hover {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.form-button:active {
+  background-color: #3270D3;
+}
